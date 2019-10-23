@@ -1,19 +1,16 @@
 /**************************************************************
-Scrivere un programma che:
-– chiede all'utente di inserire le misure della temperatura corporea di un paziente rilevate
-nell'arco di 7 giorni e salva l'input in un array;
-– stampa i risultati sotto forma di tabella con allineamento a destra;
-– stampa accanto ai risultati un istogramma con allineamento a sinistra (un * per ogni valore
-di temperatura superiore a 34 con approssimazione per difetto);
-– calcola la temperatura media, massima e minima.
+Modificare l'esercizio precedente in modo che i risultati vengano stampati sotto forma di un
+istogramma verticale, usando come carattere un asterisco (inserire un * per ogni valore di
+temperatura superiore a 34 con approssimazione per difetto), scrivendo in basso il valore relativo a
+ogni colonna.
 Esempio:
-GIORNO VALORE ISTOGRAMMA
-1        37.8        ***
-2        40.6      ******
-Utilizzare il costrutto #define per definire la durata del periodo di osservazione del paziente (7
-giorni).
-N.B.: nel caso di costanti definite con #define per convenzione si consiglia di usare nomi di
-costante scritti tutti con caratteri maiuscoli per distinguerle dalle variabili
+* *
+* * *
+* * *
+* * *
+* * * *
+* * * *
+39 40 36 40
 
 ***************************************************************/
 

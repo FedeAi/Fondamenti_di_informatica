@@ -32,6 +32,7 @@ int main(int argc, char const *argv[])
         if( count < 0){
             printf("\nwrong expression _s !!!\n");
             status=0;
+            return 0;
         }
         i++;
     }

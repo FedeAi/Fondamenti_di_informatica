@@ -18,7 +18,6 @@ riportato sopra.
 
 ================================================================================== */
 
-
 #include "stdio.h"
 #include "stdlib.h"
 #include "string.h"
@@ -29,42 +28,48 @@ int Mat1[N][N];
 
 int Mat2[N][N];
 
-void copia_dispari(int Mat1[][N], int Mat2[][N]){
+void copia_dispari(int Mat1[][N], int Mat2[][N])
+{
     int n = 0;
-    for(int i = 0; i<N; i++)
-        for(int j = 0; j<N; j++){
-           if(Mat1[i][j]%2 !=0){    
-                Mat2[n/N][n%N] = Mat1[i][j];
-                n++;  
-           }
+    for (int i = 0; i < N; i++)
+        for (int j = 0; j < N; j++)
+        {
+            if (Mat1[i][j] % 2 != 0)
+            {
+                Mat2[n / N][n % N] = Mat1[i][j];
+                n++;
+            }
         }
 }
 
-
-
-int leggi_mat(int Mat[N][N]){
-    FILE * fp;
+int leggi_mat(int Mat[N][N])
+{
+    FILE *fp;
     fp = fopen("matrice.txt", "r");
     if (fp == NULL)
     {
         perror("Error while opening the file.\n");
         return -1;
     }
-    for(int i=0; i< N*N; i++){
-        fscanf(fp,"%d,", &Mat[i/N][i%N]);
+    for (int i = 0; i < N * N; i++)
+    {
+        fscanf(fp, "%d,", &Mat[i / N][i % N]);
     }
 }
-void print_mat2d(int Mat[][N]){
-    for(int i = 0; i<N; i++){
-        for(int j = 0; j<N; j++)
+void print_mat2d(int Mat[][N])
+{
+    for (int i = 0; i < N; i++)
+    {
+        for (int j = 0; j < N; j++)
             printf("%d,", Mat[i][j]);
         printf("\n");
     }
 }
 
-int main(){
+int main()
+{
     leggi_mat(Mat1);
-    copia_dispari(Mat1,Mat2);
+    copia_dispari(Mat1, Mat2);
     print_mat2d(Mat1);
     printf("\n Mat2: \n");
     print_mat2d(Mat2);
